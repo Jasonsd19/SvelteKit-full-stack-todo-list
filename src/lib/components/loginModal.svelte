@@ -136,6 +136,7 @@
 		top: 15px;
 		animation: pulse 1s;
 		animation-iteration-count: 2;
+		cursor: pointer;
 	}
 
 	@media screen and (max-width: 280px) {
