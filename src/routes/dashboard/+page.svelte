@@ -94,7 +94,13 @@
 <div class="mainContainer">
 	<div class="header">
 		<div class="githubLinkContainer">
-			<div class="github">GitHub Code</div>
+			<div class="github">
+				<a
+					href="https://github.com/Jasonsd19/SvelteKit-full-stack-todo-list"
+					target="_blank"
+					rel="noreferrer noopener">GitHub Code</a
+				>
+			</div>
 		</div>
 		<div class="title">Unprocrastinator</div>
 		<div class="logoutButtonContainer">
@@ -294,7 +300,12 @@
 		cursor: pointer;
 	}
 
-	.github:hover {
+	.github a {
+		text-decoration: none;
+		color: #000000;
+	}
+
+	.github a:hover {
 		color: rgb(90, 109, 211);
 		text-decoration: underline;
 	}

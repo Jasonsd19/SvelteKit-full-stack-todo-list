@@ -13,4 +13,4 @@ Responsive Design: The application is fully responsive, ensuring a seamless expe
 Front-end: SvelteKit (JavaScript framework for building web applications)
 Back-end: SvelteKit form actions (for handling API requests) and MongoDB (database for storing task data)
 Styling: CSS
-Hosting: The application can be deployed on platforms like Vercel, Netlify, or your preferred hosting service (I'm using Vercel).
+Hosting: The application can be deployed on platforms like Vercel, Netlify, or your preferred hosting service (I'm using Netlify).
