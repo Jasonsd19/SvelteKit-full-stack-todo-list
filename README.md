@@ -10,7 +10,7 @@ This is a full-stack web application that allows users to manage their to-do lis
 * Responsive Design: The application is fully responsive, ensuring a seamless experience across various devices.
 
 # Tech Stack
-* Front-end: SvelteKit (JavaScript framework for building web applications)
+* Front-end: SvelteKit (JavaScript framework for building web applications) and TypeScript
 * Back-end: SvelteKit form actions (for handling API requests) and MongoDB (database for storing task data)
 * Styling: CSS
 * Hosting: The application can be deployed on platforms like Vercel, Netlify, or your preferred hosting service (I'm using Vercel).
