@@ -351,6 +351,7 @@
 		display: flex;
 		width: 25%;
 		flex-direction: column;
+		overflow-y: visible;
 	}
 
 	.createTodoContainer {
@@ -494,7 +495,7 @@
 		}
 	}
 
-	@media screen and (max-width: 300px) {
+	@media screen and (max-width: 400px) {
 		button {
 			padding-top: 1vh;
 			font-size: 14px;
