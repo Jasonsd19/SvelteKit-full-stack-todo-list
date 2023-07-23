@@ -111,11 +111,19 @@
 		.animatedTextContainer {
 			font-size: 1.5vw;
 		}
+
+		.mainTodo {
+			font-size: 4.75vw;
+		}
 	}
 
 	@media screen and (min-width: 1400px) {
 		.animatedTextContainer {
 			font-size: 1.4vw;
+		}
+
+		.mainTodo {
+			font-size: 4.75vw;
 		}
 	}
 
