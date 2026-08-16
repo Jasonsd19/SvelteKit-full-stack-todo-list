@@ -11,8 +11,12 @@ export const loginUser = async (event: RequestEvent) => {
 
     const data = await request.formData()
 
-    const username = data.get('username') as string
-    const password = data.get('password') as string
+    const usernameValue = data.get('username')
+    const password = data.get('password')
+    const username = typeof usernameValue === 'string' ? usernameValue.trim().toLowerCase() : ''
+
+    if (!username || typeof password !== 'string') return fail(400, {errorMsg: "Please enter a username and password."})
+
     const userFilter = { username }
 
     try {

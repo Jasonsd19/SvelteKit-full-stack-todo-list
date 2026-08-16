@@ -9,7 +9,7 @@
 	const showInfoModal = () => {
 		Swal.fire({
 			title: 'You Should Know!',
-			html: '<p style="font-size: 15px;">Usernames must be unique and at least 8 characters long.<br/><br/>Passwords must be at least 12 characters long, contain at least one uppercase and lowercase letter, one number, and one of !@#$%^&*</p>',
+			html: '<p style="font-size: 15px;">Usernames are case-insensitive, stored in lowercase, and must be unique and at least 5 characters long.<br/><br/>Passwords must be at least 10 characters long and contain at least one uppercase letter and one number. Special characters are optional.</p>',
 			icon: 'info',
 			confirmButtonText: '<div style="color: #000000;">Understood</div>',
 			confirmButtonColor: '#e7e4e4'
@@ -24,11 +24,11 @@
 			<form method="POST" action="?/login">
 				<div class="labelInputContainer">
 					<label for="username">Username:</label>
-					<input type="text" name="username" />
+					<input type="text" name="username" minlength={5} />
 				</div>
 				<div class="labelInputContainer">
 					<label for="password">Password:</label>
-					<input type="password" name="password" />
+					<input type="password" name="password" minlength={10} />
 				</div>
 				<div class="loginButtonContainer">
 					<button>Login</button>
@@ -39,11 +39,11 @@
 			<form method="POST" action="?/create">
 				<div class="labelInputContainer">
 					<label for="username">Username:</label>
-					<input type="text" name="username" />
+					<input type="text" name="username" minlength={5} />
 				</div>
 				<div class="labelInputContainer">
 					<label for="password">Password:</label>
-					<input type="password" name="password" />
+					<input type="password" name="password" minlength={10} />
 				</div>
 				<div class="loginButtonContainer">
 					<button>Create Account</button>

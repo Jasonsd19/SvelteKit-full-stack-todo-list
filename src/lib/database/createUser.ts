@@ -11,13 +11,14 @@ export const createUser = async (event: RequestEvent) => {
     const { request, cookies } = event
     const data = await request.formData()
 
-    const username = data.get('username') as string
-    const password = data.get('password') as string
+    const usernameValue = data.get('username')
+    const password = data.get('password')
+    const username = typeof usernameValue === 'string' ? usernameValue.trim().toLowerCase() : ''
 
-    const passRegExp = new RegExp(/(?=.*[\d])(?=.*[a-z])(?=.*[A-Z])(?=.*[_\-!@#$%^&*])[\da-zA-Z_\-!@#$%^&*]{12,}/)
+    const passRegExp = /^(?=.*\d)(?=.*[A-Z]).{10,}$/
 
-    if (username?.length < 8) return fail(400, {errorMsg: "Username is too short, it must be at least 8 characters long."})
-    if (!passRegExp.test(password)) return fail(400, {errorMsg: "Passwords must be at least 12 characters long, contain at least one uppercase and lowercase letter, one number, and one of !@#$%^&*."})
+    if (username.length < 5) return fail(400, {errorMsg: "Username is too short, it must be at least 5 characters long."})
+    if (typeof password !== 'string' || !passRegExp.test(password)) return fail(400, {errorMsg: "Passwords must be at least 10 characters long and contain at least one uppercase letter and one number."})
 
     const userFilter = { username }
     try {

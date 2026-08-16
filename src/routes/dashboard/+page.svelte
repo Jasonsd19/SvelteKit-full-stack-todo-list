@@ -138,7 +138,7 @@
 						value={createTextArea}
 						on:input={handleCreateDescUpdate}
 						maxlength={400}
-					/>
+					></textarea>
 					<div style={`text-align: right; ${createTextArea.length > 400 ? 'color: red' : ''}`}>
 						{`${createTextArea.length} / 400`}
 					</div>
@@ -173,7 +173,7 @@
 								value={updateTextArea}
 								on:input={handleUpdateDescUpdate}
 								maxlength={400}
-							/>
+							></textarea>
 							<div style={`text-align: right; ${updateTextArea.length > 400 ? 'color: red' : ''}`}>
 								{`${updateTextArea.length} / 400`}
 							</div>
@@ -201,7 +201,7 @@
 						use:enhance={handleSubmit}
 					>
 						<input name="id" value={$selectedTodo?._id ?? 0} />
-						<input name="completed" value={!$selectedTodo?.completed ?? false} />
+						<input name="completed" value={$selectedTodo ? !$selectedTodo.completed : false} />
 						<input name="index" value={index} />
 					</form>
 				</div>

@@ -14,7 +14,7 @@ export const authenticateUser = (event: RequestEvent) => {
             }
             user = username
         } catch (error) {
-            cookies.delete("token")
+            cookies.delete("token", { path: '/' })
         }
     }
 
